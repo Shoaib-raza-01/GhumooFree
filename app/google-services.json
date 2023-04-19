@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "53610478742",
+    "project_id": "ghumoo-app",
+    "storage_bucket": "ghumoo-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:53610478742:android:d6336dc361b0aa5e05d6b7",
+        "android_client_info": {
+          "package_name": "com.example.ghumoo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "53610478742-ptktej8314cs23r5rem9knad9gcgk9g1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ghumoo",
+            "certificate_hash": "34bf125c88c304620cb7bfb94b3c74781be0aa7b"
+          }
+        },
+        {
+          "client_id": "53610478742-e2rggk49ocf7mtdc2pje8aiig0k5dvbo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPDX-wffxOnhzmEewrr-lSCIS_72yNJzQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "53610478742-e2rggk49ocf7mtdc2pje8aiig0k5dvbo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
