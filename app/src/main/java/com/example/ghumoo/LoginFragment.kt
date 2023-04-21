@@ -41,8 +41,10 @@ class LoginFragment : Fragment() {
         }else{
             auth.signInWithEmailAndPassword(Email,Password).addOnCompleteListener{
                 if(it.isSuccessful){
-                    Toast.makeText(requireActivity(), "Login Was Successful", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(requireActivity(),HomePage::class.java))
+                    if(auth.currentUser!!.isEmailVerified){
+                        Toast.makeText(requireActivity(), "Login Was Successful", Toast.LENGTH_SHORT).show()
+                        startActivity(Intent(requireActivity(),HomePage::class.java))
+                    }
                 }else{
                     Toast.makeText(requireActivity(), "Invalid Credentials!!", Toast.LENGTH_SHORT).show()
                 }

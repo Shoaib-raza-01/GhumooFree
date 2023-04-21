@@ -65,36 +65,55 @@
             android:layout_height="3dp"/>
 
     </LinearLayout>
+        <!--        <ImageView-->
+<!--            android:id="@+id/facebook"-->
+<!--            android:layout_width="55dp"-->
+<!--            android:layout_height="55dp"-->
+<!--            android:clickable="true"-->
+<!--            android:focusable="true"-->
+<!--            app:srcCompat="@drawable/facebook_logo" />-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Google"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/black"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            app:cardCornerRadius="25dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/googleLogo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="start|center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginStart="20dp"
+                    app:srcCompat="@drawable/google_logo" />
 
-        <ImageView
-            android:id="@+id/google"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:layout_marginEnd="30dp"
-            app:srcCompat="@drawable/google_logo" />
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign Up Using Google"
+                    android:layout_gravity="end|center"
+                    android:layout_marginEnd="20dp"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </LinearLayout>
 
-        <ImageView
-            android:id="@+id/facebook"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:clickable="true"
-            android:focusable="true"
-            app:srcCompat="@drawable/facebook_logo" />
-    </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="\t\t\t\t\t version 1.1\n\n\nMade by Md Shoaib Raza"/>
+
 
 </LinearLayout>

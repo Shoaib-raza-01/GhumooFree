@@ -7,4 +7,6 @@
     <string name="enter_username">Enter Username</string>
     <string name="create_password">Create Password</string>
     <string name="sign_up">Sign Up</string>
+    <string name="travel_with_nus">Travel with \nUs</string>
+    <string name="profile_picture_box">Profile Picture Box</string>
 </resources>
