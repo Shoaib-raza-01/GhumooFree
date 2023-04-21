@@ -11,6 +11,7 @@ import android.widget.EditText
 import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.actionCodeSettings
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
@@ -49,10 +50,16 @@ class SignUpFragment : Fragment() {
         }else {
             auth.createUserWithEmailAndPassword(Email, pass).addOnCompleteListener {
                 if (it.isSuccessful) {
-                    Toast.makeText(requireActivity(), "Sign IN Successfully", Toast.LENGTH_SHORT)
-                        .show()
-                    startActivity(Intent(requireActivity(), HomePage::class.java))
-//                    finish()
+                    //ending user verification link
+                    auth.currentUser!!.sendEmailVerification().addOnCompleteListener{
+                        Toast.makeText(requireActivity(), "Check your email for the verification mail", Toast.LENGTH_SHORT).show()
+                        if (auth.currentUser!!.isEmailVerified){
+                            Toast.makeText(requireActivity(), "Sign IN Successfully", Toast.LENGTH_SHORT).show()
+                            startActivity(Intent(requireActivity(), HomePage::class.java))
+                        }else{
+                            Toast.makeText(requireActivity(), "Please Verify your Email First!!", Toast.LENGTH_SHORT).show()
+                        }
+                    }
                 } else {
                     Toast.makeText(requireActivity(), "Sign IN Failed", Toast.LENGTH_SHORT).show()
                 }
