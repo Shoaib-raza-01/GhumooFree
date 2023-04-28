@@ -1,5 +1,6 @@
 package com.example.ghumoo
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.SurfaceControl.Transaction
@@ -17,6 +18,7 @@ class HomePage : AppCompatActivity() {
         setContentView(R.layout.activity_home_page)
         loadFragment(HomeFragment())
         bottomNavigationView = findViewById(R.id.bottomNav)
+//        bottomNavigationView.setBackgroundColor(Color.BLACK)     // this is to change the background color of the bottom navigation bar
         bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId){
 
@@ -42,6 +44,7 @@ class HomePage : AppCompatActivity() {
     private fun loadFragment(fragment:Fragment){
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.container,fragment)
+        transaction.addToBackStack(null)
         transaction.commit()
     }
 }
