@@ -34,7 +34,6 @@ class HomeFragment : Fragment() {
 
         recyclerView = v.findViewById(R.id.placesRecyclerView)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
-//        recyclerView.setHasFixedSize(true)
         placeArrayList = arrayListOf()
 
         //to set the profile picture of user
@@ -53,20 +52,11 @@ class HomeFragment : Fragment() {
         }
 
         //database firestore
-        val db = FirebaseFirestore.getInstance()
+        db = FirebaseFirestore.getInstance()
 
         db.collection("Places")
             .get()
             .addOnSuccessListener {
-//                    result ->
-//                val items = mutableListOf<DataModel>()
-//                for (document in result) {
-//                    val imageUrl = document.getString("imageUrl")
-//                    val item = DataModel(imageUrl)
-//                    items.add(item)
-//                }
-//                val adapter = AdapterClass(items)
-//                recyclerView.adapter = adapter
                 if (!it.isEmpty){
                     for ( data in it.documents){
                         var Data : DataModel? = data.toObject(DataModel::class.java)

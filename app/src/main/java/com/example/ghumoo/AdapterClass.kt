@@ -1,15 +1,11 @@
 package com.example.ghumoo
 
-import android.app.Activity
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.squareup.picasso.Picasso
 
 class AdapterClass(private val placeList: ArrayList<DataModel>): RecyclerView.Adapter<AdapterClass.MyViewHolder>() {
@@ -32,7 +28,7 @@ class AdapterClass(private val placeList: ArrayList<DataModel>): RecyclerView.Ad
         holder.location.text = placeList[position].location
         holder.about.text = placeList[position].about
         holder.rating.text = placeList[position].rating
-        var imageUri = placeList[position].imageUrl
+        val imageUri = placeList[position].imageUrl
 //        Glide.with(Activity())
 //            .load(imageUri)
 //            .into(holder.placeImage)

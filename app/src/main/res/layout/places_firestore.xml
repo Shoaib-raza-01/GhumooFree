@@ -1,28 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
-<androidx.cardview.widget.CardView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:elevation="10dp"
-    app:cardCornerRadius="20dp"
-    android:orientation="vertical">
-    <LinearLayout
+        <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:elevation="10dp"
+        android:layout_margin="15dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="20dp"
         android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
             android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/placeImage"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:layout_margin="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="15dp"
                 android:background="@color/white"
                 android:backgroundTint="@color/white"
                 android:padding="3dp" />
@@ -30,14 +37,14 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:orientation="vertical">
                 <TextView
                     android:id="@+id/placeName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:textSize="20sp"
+                    android:textSize="24sp"
                     android:textStyle="bold"
                     android:padding="3dp"
                     android:textAlignment="center"
@@ -47,12 +54,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
                     android:padding="3dp"
+                    android:maxLines="4"
                     android:textStyle="italic"
                     android:textSize="16sp"
                     android:letterSpacing="0.06"
-                    android:textAlignment="center"
+                    android:textAlignment="gravity"
                     android:textColor="@color/black" />
             </LinearLayout>
         </LinearLayout>
@@ -67,10 +74,11 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="10dp"
+                    android:layout_gravity="center"
                     android:src="@drawable/baseline_location_on_24"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -78,7 +86,8 @@
                     android:id="@+id/location"
                     android:layout_gravity="center"
                     android:textSize="22sp"
-                    android:textColor="#272323"/>
+                    android:textStyle="bold"
+                    android:textColor="#4CAF50"/>
             </LinearLayout>
 
             <LinearLayout
@@ -90,9 +99,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="10dp"
-                    android:textSize="22sp"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
                     android:textColor="#768762"
-                    android:letterSpacing="0.2"
+                    android:letterSpacing="0.1"
                     android:textStyle="bold"
                     android:text="RATINGS  "/>
                 <TextView
@@ -100,7 +110,14 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/rating"
                     android:layout_gravity="center"
-                    android:textSize="22sp"
+                    android:textSize="16sp"
+                    android:textColor="#272323"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="16sp"
+                    android:text=" / 5"
                     android:textColor="#272323"/>
             </LinearLayout>
 

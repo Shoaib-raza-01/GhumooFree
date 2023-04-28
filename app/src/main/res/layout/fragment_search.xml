@@ -6,6 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".SearchFragment">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -16,9 +20,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_margin="40dp"
+                android:backgroundTint="#4CAF50"
                 android:background="@drawable/border"
                 android:hint="Search for a place here"
                 android:padding="20dp"
+                android:textColor="@color/white"
+                android:textColorHint="#99BA9A"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -26,6 +33,7 @@
                 app:layout_constraintVertical_bias="0.084" />
 
             <LinearLayout
+                android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -168,8 +176,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="25dp"
-                            app:cardBackgroundColor="#EDEDED"
                             android:layout_marginEnd="25dp"
+                            app:cardBackgroundColor="#EDEDED"
                             app:cardCornerRadius="20dp">
 
                             <LinearLayout
@@ -197,5 +205,34 @@
                     </LinearLayout>
                 </HorizontalScrollView>
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Popular Activities"
+                android:textColor="#4CAF50"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.093"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                app:layout_constraintVertical_bias="0.048" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/activityRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                app:layout_constraintVertical_bias="0"
+                tools:listitem="@layout/popular_activities" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </FrameLayout>
