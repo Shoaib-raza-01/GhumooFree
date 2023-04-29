@@ -48,6 +48,7 @@ class HomeFragment : Fragment() {
         //to move user from homeFragment to profileFragment
         profileCard.setOnClickListener {
             val transaction = requireActivity().supportFragmentManager.beginTransaction().replace(R.id.container,ProfileFragment())
+            transaction.addToBackStack(null)
             transaction.commit()
         }
 

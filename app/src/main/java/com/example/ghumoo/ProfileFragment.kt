@@ -2,40 +2,48 @@ package com.example.ghumoo
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
+import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import com.squareup.picasso.Picasso
+
 
 class ProfileFragment : Fragment() {
-    lateinit var signOut : Button
-    lateinit var uid :TextView
     private lateinit var auth :FirebaseAuth
+    private lateinit var userPic: ImageView
+    private lateinit var userName : TextView
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val v:View = inflater.inflate(R.layout.fragment_profile, container, false)
-        signOut = v.findViewById(R.id.signOutBtn)
-        uid = v.findViewById(R.id.Uid)
+        val v : View =  inflater.inflate(R.layout.fragment_profile, container, false)
+        userPic = v.findViewById(R.id.userProfileImage)
+        userName = v.findViewById(R.id.userName)
+        auth = FirebaseAuth.getInstance()
+        Picasso.get().load(auth.currentUser!!.photoUrl).into(userPic)
+        userName.text = auth.currentUser!!.displayName
 
-        //initializing the firebase auth config
-        auth = Firebase.auth
-
-        //getting the current user id
-        uid.text = auth.currentUser!!.uid
-
-        //signing out the user
-        signOut.setOnClickListener {
+        val logOut = v.findViewById<androidx.cardview.widget.CardView>(R.id.logOut)
+        logOut.setOnClickListener {
             auth.signOut()
-            startActivity(Intent(requireActivity(),MainActivity::class.java))
+            startActivity(Intent(requireContext(),MainActivity::class.java))
         }
+
+        val creditCoupons = v.findViewById<androidx.cardview.widget.CardView>(R.id.credit_coupons)
+        creditCoupons.setOnClickListener {
+            val transaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.container,CreditCouponFragment()).addToBackStack(null).commit()
+        }
+
         return v
     }
 }

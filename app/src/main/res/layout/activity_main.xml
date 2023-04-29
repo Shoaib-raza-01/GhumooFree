@@ -7,29 +7,31 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:background="@drawable/login_background"
+    android:backgroundTint="#80FFFFFF"
+    android:backgroundTintMode="src_over"
     tools:context=".MainActivity">
 
 
     <androidx.cardview.widget.CardView
         android:layout_width="330dp"
         android:layout_height="400dp"
-        app:cardCornerRadius="25dp"
-        app:cardBackgroundColor="@color/purple_200">
+        android:backgroundTint="#FFFFFF"
+        app:cardCornerRadius="25dp">
+
 
         <androidx.viewpager.widget.ViewPager
-            xmlns:tools="http://schemas.android.com/tools"
-            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:id="@+id/view_pager">
 
-            <com.google.android.material.tabs.TabLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/purple_200"
-                app:tabTextColor="@color/black"
-                android:id="@+id/tabs"/>
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabTextColor="@color/black"
+            android:backgroundTint="#65FFFFFF"
+            android:id="@+id/tabs"/>
 
         </androidx.viewpager.widget.ViewPager>
 
