@@ -1,28 +1,365 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_marginBottom="60dp"
     tools:context=".ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <Button
-        android:id="@+id/signOutBtn"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_gravity="bottom"
-        android:layout_marginBottom="100dp"
-        android:text="logOut"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/Uid"
-        android:layout_marginTop="300dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"/>
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/materialCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="150dp"
+                    android:layout_marginEnd="25dp"
+                    android:backgroundTint="@color/black"
+                    android:elevation="30dp"
+                    app:cardCornerRadius="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="200dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        app:cardCornerRadius="20dp">
+
+                        <TextView
+                            android:id="@+id/offerName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:letterSpacing="0.03"
+                            android:text="Special guest offer !"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold|normal" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/offerDescription"
+                                android:layout_width="230dp"
+                                android:layout_height="52dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="37dp"
+                                android:text="Exciting offers on food, activities and shopping"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="normal" />
+
+                            <ImageView
+                                android:id="@+id/offerImage"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_marginTop="35dp"
+                                android:src="@drawable/offer_pic" />
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/userName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.328" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Traveller, Foodie and Art Lover"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="italic"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.498"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/userName"
+                            app:layout_constraintVertical_bias="0.04" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="75dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.25">
+
+                    <ImageView
+                        android:id="@+id/userProfileImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:letterSpacing="0.04"
+                    android:textStyle="normal|italic"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="20dp"
+                    android:text="Profile"/>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/recentVisits"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:cardBackgroundColor="#C3A2DBE3"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="20sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="40sp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginStart="20dp"
+                        android:src="@drawable/baseline_location_city_24"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginStart="15dp"
+                        android:text="Recently Visited"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/credit_coupons"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    app:cardBackgroundColor="#C3A2DBE3"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="20sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="40sp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginStart="20dp"
+                            android:src="@drawable/baseline_discount_24"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginStart="15dp"
+                            android:text="Credits and Coupons"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/myBookings"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    app:cardBackgroundColor="#C3A2DBE3"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="20sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="40sp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginStart="20dp"
+                            android:src="@drawable/baseline_add_task_24"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginStart="15dp"
+                            android:text="My Bookings"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/logOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    app:cardBackgroundColor="#C3A2DBE3"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="20sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="40sp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginStart="20dp"
+                            android:src="@drawable/baseline_logout_24"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginStart="15dp"
+                            android:text="Log Out"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:letterSpacing="0.04"
+                    android:textStyle="normal|italic"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="20dp"
+                    android:text="Community"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/writeToUs"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    app:cardBackgroundColor="#C3A2DBE3"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="20sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="40sp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginStart="20dp"
+                            android:src="@drawable/baseline_edit_note_24"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginStart="15dp"
+                            android:text="Write to Us"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/shareApp"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    app:cardBackgroundColor="#C3A2DBE3"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="20sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="40sp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginStart="20dp"
+                            android:src="@drawable/baseline_share_24"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginStart="15dp"
+                            android:text="Share App"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_margin="20dp"
+                    android:layout_gravity="center"
+                    android:text="Version 1.0.0"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
 
 </FrameLayout>
+

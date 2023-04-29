@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Profile">
+        <menu>
+            <group>
+                <item
+                    android:id="@+id/recent"
+                    android:title="Recent Visits"/>
+
+                <item
+                    android:id="@+id/credit_coupons"
+                    android:title="Credits and Coupons"/>
+
+                <item
+                    android:id="@+id/myBookings"
+                    android:title="My Bookings"/>
+
+                <item
+                    android:id="@+id/setting"
+                    android:title="Settings"/>
+
+                <item
+                    android:id="@+id/signOut"
+                    android:title="Log Out"/>
+
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Community">
+        <menu>
+            <group>
+                <item
+                    android:id="@+id/writeUs"
+                    android:title="Write to us"/>
+                <item
+                    android:id="@+id/share"
+                    android:icon="@drawable/baseline_share_24"
+                    android:title="Share"/>
+                <item
+                    android:id="@+id/version"
+                    android:title="Version 1.0.0"/>
+            </group>
+        </menu>
+    </item>
+</menu>
