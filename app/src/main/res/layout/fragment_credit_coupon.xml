@@ -125,6 +125,7 @@
                             android:orientation="horizontal">
                             <androidx.cardview.widget.CardView
                                 android:layout_width="100dp"
+                                android:id="@+id/ZomatoRedeem"
                                 android:layout_height="50dp"
                                 app:cardBackgroundColor="@color/purple_200"
                                 app:cardCornerRadius="18dp">
@@ -249,6 +250,7 @@
                             android:orientation="horizontal">
                             <androidx.cardview.widget.CardView
                                 android:layout_width="100dp"
+                                android:id="@+id/netmeds"
                                 android:layout_height="50dp"
                                 app:cardBackgroundColor="@color/purple_200"
                                 app:cardCornerRadius="18dp">
@@ -375,6 +377,7 @@
                             <androidx.cardview.widget.CardView
                                 android:layout_width="100dp"
                                 android:layout_height="50dp"
+                                android:id="@+id/oyo"
                                 app:cardBackgroundColor="@color/purple_200"
                                 app:cardCornerRadius="18dp">
                                 <TextView
@@ -499,6 +502,7 @@
                             android:orientation="horizontal">
                             <androidx.cardview.widget.CardView
                                 android:layout_width="100dp"
+                                android:id="@+id/swiggy"
                                 android:layout_height="50dp"
                                 app:cardBackgroundColor="@color/purple_200"
                                 app:cardCornerRadius="18dp">
@@ -627,6 +631,7 @@
                             android:orientation="horizontal">
                             <androidx.cardview.widget.CardView
                                 android:layout_width="100dp"
+                                android:id="@+id/ixigo"
                                 android:layout_height="50dp"
                                 app:cardBackgroundColor="@color/purple_200"
                                 app:cardCornerRadius="18dp">
