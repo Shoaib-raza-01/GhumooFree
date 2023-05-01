@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         googleSignInClient = GoogleSignIn.getClient(this,gso)
 
         googleBtn.setOnClickListener {
-            Toast.makeText(applicationContext, "Hello motto", Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext, "Successfully Signed In", Toast.LENGTH_SHORT).show()
             signInGoogle()
         }
     }
