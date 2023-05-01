@@ -22,9 +22,11 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardView7"
+                    app:cardCornerRadius="10dp"
+                    android:layout_margin="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    app:cardBackgroundColor="#2196F3"
+                    app:cardBackgroundColor="#A3ADF8B0"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
@@ -32,12 +34,18 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="30sp"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="20dp"
-                        android:gravity="center"
-                        android:layout_marginEnd="40dp"
+                        android:layout_gravity="top|center"
+                        android:layout_marginTop="30dp"
                         android:textStyle="bold"
-                        android:text="Get a REWARD for every time \nyou use our APP"/>
+                        android:text="COUPONS"/>
+
+                    <ImageView
+                        android:layout_width="230dp"
+                        android:layout_height="130dp"
+                        android:layout_gravity="top|center"
+                        android:layout_marginTop="70dp"
+                        android:src="@drawable/barcode"/>
+
                 </androidx.cardview.widget.CardView>
             </androidx.constraintlayout.widget.ConstraintLayout>
 <!--start-->

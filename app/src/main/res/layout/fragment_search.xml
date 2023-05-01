@@ -19,9 +19,8 @@
                 android:id="@+id/editText"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:layout_margin="40dp"
+                android:layout_margin="10dp"
                 android:background="@drawable/border"
-                android:backgroundTint="#4CAF50"
                 android:hint="Search for a place here"
                 android:padding="20dp"
                 android:textColor="@color/white"
@@ -31,6 +30,20 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Quick Search"
+                android:textColor="#4CAF50"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText" />
+
 
             <LinearLayout
                 android:id="@+id/linearLayout"
@@ -210,16 +223,17 @@
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:text="Popular Activities"
                 android:textColor="#4CAF50"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.093"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-                app:layout_constraintVertical_bias="0.048" />
+                app:layout_constraintVertical_bias="0.028" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/activityRecyclerView"
