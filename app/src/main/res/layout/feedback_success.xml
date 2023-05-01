@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/happiness"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thank You!"
+        android:textSize="26sp"
+        android:textColor="#333030"
+        android:textStyle="bold"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="By giving your valuable feedback, you help us improve Ghumoo"
+        android:textSize="17sp"
+        android:textColor="#333030"
+        android:textStyle="normal"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:layout_margin="10dp"/>
+
+</LinearLayout>

@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.ktx.Firebase
@@ -42,6 +43,12 @@ class ProfileFragment : Fragment() {
         creditCoupons.setOnClickListener {
             val transaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.container,CreditCouponFragment()).addToBackStack(null).commit()
+        }
+
+        val writeToUs = v.findViewById<CardView>(R.id.writeToUs)
+        writeToUs.setOnClickListener {
+            val transaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.container,FeedbackFragment()).addToBackStack(null).commit()
         }
 
         return v
